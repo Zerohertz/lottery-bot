@@ -52,6 +52,8 @@ class Notification:
             message = f"로또 *{winning['round']}회* - *{winning['money']}* 당첨 되었습니다 :tada:"
             self._send_discord_webhook(webhook_url, message)
         except KeyError:
+            message = "로또 6/45 - 낙첨입니다... :sob:"
+            self._send_discord_webhook(webhook_url, message)
             return
 
     def send_win720_winning_message(self, winning: dict, webhook_url: str) -> None: 
