@@ -60,7 +60,7 @@ def check():
     # discord_webhook_url = os.environ.get("DISCORD_WEBHOOK_URL")
     slack_bot_token = os.environ.get("SLACK_BOT_TOKEN")
     notify = notification.Notification(
-        slack_bot_token, "zerohertz", name="Lotto", icon_emoji="money_with_wings"
+        slack_bot_token, "lottery", name="Lotto", icon_emoji="money_with_wings"
     )
 
     globalAuthCtrl = auth.AuthController()
